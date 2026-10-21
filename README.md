@@ -55,3 +55,19 @@ Build Command: npm run build
 Output Directory: dist
 
 Yayın adresi doğrulandıktan sonra README'nin ilk satırına eklenmelidir.
+
+
+## Sprint 5 — React Bileşenleri
+
+Mevcut frontend aynı CSS ve verilerle bileşenlere ayrıldı. App.tsx 70 satırdır; page, selectedId, searchText ve category state'leri App'te kalır.
+
+- layout: Header, Navigation, Footer
+- events: EventCard, EventList, EventFilter, EventDetail
+- forms: EventForm
+- ortak yardımcılar: types/page.ts, utils/format-date.ts
+
+Her props alan bileşenin interface'i ve her bileşen dosyasının default export'u vardır. Kart anahtarı etkinliğin id'sidir. Filtreler kontrollüdür; detay ve form işlemleri callback ile App'e bildirilir. Form gönderimi sayfayı yenilemeden üst konuma kaydırır; kalıcı kayıt Sprint 6 kapsamındadır.
+
+Kontroller: npm run build; npm run lint -- src. Beş sayfanın sunucu tarafında üretilen HTML çıktısı Sprint 4 ile birebir karşılaştırıldı. Tarayıcıda görsel kontrol ve Vercel yayını ayrıca yapılmalıdır.
+
+Çalıştırma: cd frontend, npm ci, npm run dev.
